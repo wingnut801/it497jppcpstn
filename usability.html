@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Spiritual Reflection</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- Placeholder -->
+<div id="site-header"></div>
+
+<!-- JavaScript include -->
+<script>
+  const titleMap = {
+    "index.html": "Home",
+    "guiding.html": "Guiding Principles",
+    "projects.html": "Professional Projects",
+    "ethics.html": "Ethical Reflection",
+    "reflection.html": "Spiritual Reflection",
+    "usability.html": "Usability",
+    "resume.html": "Résumé"
+  };
+
+  const path = window.location.pathname.split("/").pop();
+  const title = titleMap[path] || "Portfolio";
+
+  // Fetch header and then inject the page title
+  fetch('header.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-header').innerHTML = text;
+      const headerTitle = document.getElementById("page-title");
+      if (headerTitle) headerTitle.textContent = title;
+    });
+</script>
+<main>
+<section>
+  <h2>Portfolio Usability Testing and Design Enhancements</h2>
+
+  <h3>Usability Testing Participants</h3>
+  <ul>
+    <li>Self-review (desktop, tablet, phone)</li>
+    <li>Peer reviewer: coworker with web design experience</li>
+    <li>Family member with no tech background (tested clarity/navigation)</li>
+  </ul>
+
+  <h3>Issues Identified</h3>
+  <ul>
+    <li>Menu font was too small on mobile</li>
+    <li>Some project links were broken or hard to find</li>
+    <li>Reflection pages were text-heavy and lacked visual anchors</li>
+    <li>Not all files were accessible (missing “files” folder in repo)</li>
+  </ul>
+
+  <h3>Enhancements Made</h3>
+  <ul>
+    <li>Increased nav font size and spacing for readability</li>
+    <li>Fixed all hyperlinks and tested them on multiple devices</li>
+    <li>Broke long reflection texts into shorter paragraphs and added subheadings</li>
+    <li>Added downloadable project files to /files and tested access</li>
+    <li>Verified responsiveness and accessibility (contrast, alt text)</li>
+  </ul>
+
+  <h3>Impact on Usability</h3>
+  <p>Visitors now find it easier to navigate between sections. Reflections are more readable, and the site feels more polished and professional, especially on mobile. Accessibility is also improved for users with visual limitations or alternative devices.</p>
+</section>
+
+</main>

@@ -8,20 +8,34 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Spiritual Reflection</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guiding.html">Guiding Principles</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="ethics.html">Ethical Reflection</a></li>
-        <li><a href="reflection.html">Spiritual Reflection</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
+<!-- Placeholder -->
+<div id="site-header"></div>
+
+<!-- JavaScript include -->
+<script>
+  const titleMap = {
+    "index.html": "Home",
+    "guiding.html": "Guiding Principles",
+    "projects.html": "Professional Projects",
+    "ethics.html": "Ethical Reflection",
+    "reflection.html": "Spiritual Reflection",
+    "usability.html": "Usability",
+    "resume.html": "Résumé"
+  };
+
+  const path = window.location.pathname.split("/").pop();
+  const title = titleMap[path] || "Portfolio";
+
+  // Fetch header and then inject the page title
+  fetch('header.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-header').innerHTML = text;
+      const headerTitle = document.getElementById("page-title");
+      if (headerTitle) headerTitle.textContent = title;
+    });
+</script>
+  <main class="spiritual-reflection">
     <section>
       <h2>Spiritual and Professional Growth</h2>
       <p>As I’ve worked on this portfolio, I’ve come to see how deeply connected my faith is to my work in technology. Each project I’ve undertaken, each challenge I’ve faced, and each solution I’ve implemented has not only taught me something technical but has also stretched me spiritually. When I pause to reflect, I realize that my work has become a proving ground for my discipleship.</p>
@@ -30,24 +44,37 @@
     </section>
     <section>
       <h2>Spiritual Insights That Have Guided Me</h2>
-      <div class="spiritual-reflection">
       <h3>1. <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2.17" target="_blank">Mosiah 2:17</a> – “When ye are in the service of your fellow beings...”</h3>
       <p>This verse reminds me that my work in IT can be spiritual when I approach it as service.  Every time I help someone solve a problem or recover lost data, I’m not just fixing tech, I’m serving a person.</p>
 
      <h3>2. <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121.41-42" target="_blank">Doctrine and Covenants 121:41–42</a> – Leadership with gentleness and love</h3>
       <p>This scripture reminds me to lead with patience, especially in moments of frustration.  IT work often involves guiding others through stressful issues, and doing so with kindness has deepened my ability to lead.</p>
 
-      <h3>3. <a href="https://www.churchofjesuschrist.org/study/general-conference/2006/05/quick-to-observe" target="_blank">Elder David A. Bednar – “Quick to Observe”</a></h3>
-    <p>This talk taught me to notice small spiritual and technical signals.  Just as I watch for red flags in systems, I can watch for spiritual impressions. Being alert has helped me make better decisions on both fronts.</p>
-
+    <h3>3. <a href="https://www.churchofjesuschrist.org/study/general-conference/2006/05/quick-to-observe" target="_blank">Elder David A. Bednar – “Quick to Observe”</a></h3>
+      <p>This talk taught me to notice small spiritual and technical signals.  Just as I watch for red flags in systems, I can watch for spiritual impressions. Being alert has helped me make better decisions on both fronts.</p>
     <h3>4. <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25.40" target="_blank">Matthew 25:40</a> – “Ye have done it unto me”</h3>
-    <p>Even mundane tasks matter.  This verse helps me remember that my smallest acts of integrity and effort are noticed by the Lord.</p>
+      <p>Even mundane tasks matter.  This verse helps me remember that my smallest acts of integrity and effort are noticed by the Lord.</p>
 
     <h3>5. <a href="https://www.churchofjesuschrist.org/study/general-conference/2005/10/if-ye-are-prepared-ye-shall-not-fear" target="_blank">Gordon B. Hinckley – “If Ye Are Prepared Ye Shall Not Fear”</a></h3>
-    <p>This has been a guiding principle in both my life and my work.  Preparation gives me confidence—whether I’m patching a system, presenting a portfolio, or trying to live a faithful life.</p>
+      <p>This has been a guiding principle in both my life and my work.  Preparation gives me confidence—whether I’m patching a system, presenting a portfolio, or trying to live a faithful life.</p>
   </div>
-
     </section>
+    <section>
+    <h4>Christlike Attributes and Personal Reflection</h4>
+      <p>As I’ve developed my professional portfolio and reflected on my work in IT, I’ve come to see how Christlike attributes like humility, diligence, integrity, and compassion deeply influence not just how I treat others, but how I approach technical challenges.
+      One example is stewardship, understanding that the systems I manage and the data I handle aren’t just “resources” but represent people who trust me. This mindset affects how I document procedures, validate backups, and guard privacy.
+      I’ve also become more aware of my personal warning signs. When I feel rushed, short-tempered, or overly confident in my knowledge, I recognize those as signals to pause. These moments remind me to ask, “Am I acting in pride or service?” Being intentional about staying prayerful, teachable, and balanced has helped me avoid burnout and poor judgment.
+      These insights have shaped my portfolio design as well, I've tried to present my work clearly, humbly, and with purpose. I want it to reflect not only my technical skills but the values I try to live by.</p>
+    </section>
+    <section>
+      <h3>Faith and Work: A Quiet Reminder</h3>
+      <p>Although I wasn’t able to spend time inside the temple this week, I took time during my lunch break to sit quietly on the temple grounds. I’m fortunate that the temple is just a short distance from my office, and even a few quiet moments there gave me space to reflect.
+        I found myself thinking about how much of my work relies on quiet discipline, doing the right thing when no one is watching. Inside the temple, everything is marked by order, reverence, and purpose. That same spirit is something I want to bring into my work.
+        In IT, while we work with systems, data, and security, at the heart of it, we’re serving people. Every script I write, every system I configure, every user I support is an opportunity to act with quiet care. A verse came to mind: <em>“Let all things be done decently and in order”</em> (1 Corinthians 14:40).
+        That’s the standard I want to uphold, not just in my systems, but in my life. This moment reaffirmed something I deeply believe: faith and professionalism aren’t separate paths—they run side by side. My commitment to excellence in IT is one way I strive to reflect Christ’s teachings in everything I do.</p>
+    </section>
+
+
   </main>
   <footer>
     <p>&copy; 2025 J Nuttall. Built with HTML, CSS, and purpose.</p>

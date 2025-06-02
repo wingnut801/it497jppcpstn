@@ -8,19 +8,33 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Guiding Spiritual Principles</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guiding.html">Guiding Principles</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="ethics.html">Ethical Reflection</a></li>
-        <li><a href="reflection.html">Spiritual Reflection</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Placeholder -->
+<div id="site-header"></div>
+
+<!-- JavaScript include -->
+<script>
+  const titleMap = {
+    "index.html": "Home",
+    "guiding.html": "Guiding Principles",
+    "projects.html": "Professional Projects",
+    "ethics.html": "Ethical Reflection",
+    "reflection.html": "Spiritual Reflection",
+    "usability.html": "Usability",
+    "resume.html": "Résumé"
+  };
+
+  const path = window.location.pathname.split("/").pop();
+  const title = titleMap[path] || "Portfolio";
+
+  // Fetch header and then inject the page title
+  fetch('header.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-header').innerHTML = text;
+      const headerTitle = document.getElementById("page-title");
+      if (headerTitle) headerTitle.textContent = title;
+    });
+</script>
   <main>
     <section>
       <h2>Growth Through Adversity</h2>
