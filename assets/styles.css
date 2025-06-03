@@ -114,7 +114,7 @@ body {
   text-decoration: underline;
 }
 /* Section Title Styling */
-section h2, section h3, section h4 {
+section h2, section h3, section h4, section h5 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #003366;
