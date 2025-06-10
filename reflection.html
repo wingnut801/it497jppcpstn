@@ -20,7 +20,9 @@
     "ethics.html": "Ethical Reflection",
     "reflection.html": "Spiritual Reflection",
     "usability.html": "Usability",
-    "resume.html": "Résumé"
+    "resume.html": "Resume",
+    "action-plan.html": "Action Plan",
+    "final-reflection": "Final Reflection"
   };
 
   const path = window.location.pathname.split("/").pop();
@@ -35,7 +37,16 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script>
-  <main class="spiritual-reflection">
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
+  <main>
+    <div class="feature-box">
     <section>
       <h2>Spiritual and Professional Growth</h2>
       <p>As I’ve worked on this portfolio, I’ve come to see how deeply connected my faith is to my work in technology. Each project I’ve undertaken, each challenge I’ve faced, and each solution I’ve implemented has not only taught me something technical but has also stretched me spiritually. When I pause to reflect, I realize that my work has become a proving ground for my discipleship.</p>
@@ -57,8 +68,7 @@
 
     <h3>5. <a href="https://www.churchofjesuschrist.org/study/general-conference/2005/10/if-ye-are-prepared-ye-shall-not-fear" target="_blank">Gordon B. Hinckley – “If Ye Are Prepared Ye Shall Not Fear”</a></h3>
       <p>This has been a guiding principle in both my life and my work.  Preparation gives me confidence—whether I’m patching a system, presenting a portfolio, or trying to live a faithful life.</p>
-  </div>
-    </section>
+   </section>
     <section>
     <h4>Christlike Attributes and Personal Reflection</h4>
       <p>As I’ve developed my professional portfolio and reflected on my work in IT, I’ve come to see how Christlike attributes like humility, diligence, integrity, and compassion deeply influence not just how I treat others, but how I approach technical challenges.</p>
@@ -76,11 +86,8 @@
         <p>
         That’s the standard I want to uphold, not just in my systems, but in my life. This moment reaffirmed something I deeply believe: faith and professionalism aren’t separate paths, they run side by side. My commitment to excellence in IT is one way I strive to reflect Christ’s teachings in everything I do.</p>
     </section>
-
-
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 J Nuttall. Built with HTML, CSS, and purpose.</p>
-  </footer>
+<div id="site-footer"></div>
 </body>
 </html>

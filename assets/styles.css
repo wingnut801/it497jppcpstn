@@ -84,7 +84,7 @@ body {
       padding: 1.5rem;
     }
   }
-  .spiritual-reflection {
+  .feature-box {
   background-color: #eef3f8;
   border-left: 4px solid #003366;
   padding: 1.5rem;
@@ -92,25 +92,25 @@ body {
   border-radius: 6px;
 }
 
-.spiritual-reflection h3 {
+.feature-box h3 {
   margin-top: 1.2rem;
   font-size: 1.2rem;
   color: #003366;
 }
 
-.spiritual-reflection p {
+.feature-box p {
   margin: 0.5rem 0 1rem 0;
   line-height: 1.6;
 }
 
-.spiritual-reflection a {
+.feature-box a {
   color: #003366;
   text-decoration: none;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
-.spiritual-reflection a:hover {
+.feature-box a:hover {
   text-decoration: underline;
 }
 /* Section Title Styling */

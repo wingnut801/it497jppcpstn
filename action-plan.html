@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Action Plan</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    /* Indent nested bullet points consistently */
+    ul ul {
+      margin-left: 1.5rem;
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Placeholder -->
+  <div id="site-header"></div>
+
+  <!-- Header injection -->
+  <script>
+    const titleMap = {
+      "index.html": "Home",
+      "guiding.html": "Guiding Principles",
+      "projects.html": "Professional Projects",
+      "ethics.html": "Ethical Reflection",
+      "reflection.html": "Spiritual Reflection",
+      "usability.html": "Usability",
+      "resume.html": "Resume",
+      "action-plan.html": "Action Plan",
+      "final-reflection": "Final Reflection"
+    };
+
+    const path = window.location.pathname.split("/").pop();
+    const title = titleMap[path] || "Portfolio";
+
+    fetch("header.html")
+      .then((res) => res.text())
+      .then((text) => {
+        document.getElementById("site-header").innerHTML = text;
+        const headerTitle = document.getElementById("page-title");
+        if (headerTitle) headerTitle.textContent = title;
+      });
+  </script>
+  <!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
+  <main>
+    <div class="feature-box">
+    <h1>Action Plan for Ongoing Spiritual and Professional Development</h1>
+
+    <section>
+  <h2>Spiritual Development Goals</h2>
+  <ul>
+    <li>
+      <strong>Deepen Daily Spiritual Habits (Ongoing – Next 3–6 Months):</strong>
+      <ul>
+        <li>Continue daily scripture study with a focus on Christlike leadership, patience, and service.</li>
+        <li>Continue to maintain a daily journal to reflect on impressions, challenges, and answered prayers.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Strengthen Community and Church Involvement (Next 6–12 Months):</strong>
+      <ul>
+        <li>Look for new opportunities to serve in the ward or stake that align with both my spiritual gifts and technical skills.</li>
+        <li>Volunteer for tech-related support for family history, stake technology, or other service projects.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Christlike Leadership in the Workplace (Ongoing – Next 12 Months):</strong>
+      <ul>
+        <li>Apply principles of humility, integrity, and gentleness in team settings, especially during stressful situations or conflicts.</li>
+        <li>Continue to make time for regular temple attendance and quiet reflection on the temple grounds to stay spiritually grounded in my daily work.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Integrate Faith and Professional Life More Fully (1–2 Years):</strong>
+      <ul>
+        <li>Look for ways to share my discipleship story and testimony, whether in mentoring, teaching, or service roles.</li>
+        <li>Regularly revisit and update my portfolio to reflect both technical growth and spiritual insights gained through experience.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Professional Development Goals</h2>
+  <ul>
+    <li>
+      <strong>Transition from Student to Senior Contributor (Next 3 Months):</strong>
+      <ul>
+        <li>Reflect on academic experience and integrate key takeaways into team workflows.</li>
+        <li>Document and present process improvements or ideas sparked during senior project work.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Leadership and Mentorship Growth (Ongoing – Next 6–12 Months):</strong>
+      <ul>
+        <li>Continue mentoring junior team members and promote knowledge sharing through team huddles or documentation.</li>
+        <li>Lead by example in reliability, technical clarity, and problem ownership.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Technical Deepening and Innovation (6–18 Months):</strong>
+      <ul>
+        <li>Learn a new scripting or programming language (e.g., Python for automation, or JavaScript for dashboard tools).</li>
+        <li>Research and apply new technologies or infrastructure strategies in home lab or work environments (e.g., infrastructure as code, containerization, or AI-enhanced monitoring).</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Ethical and Purpose-Driven Impact (Ongoing):</strong>
+      <ul>
+        <li>Continue to approach IT work with a stewardship mindset, understanding the people behind the systems.</li>
+        <li>Lead or support technology initiatives that serve others (e.g., family history support, youth training, digital literacy workshops).</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+    </div>
+  </main>
+   <div id="site-footer"></div>
+</body>
+</html>

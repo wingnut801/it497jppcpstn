@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Final Reflective Essay</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- Placeholder for injected header -->
+  <div id="site-header"></div>
+
+  <!-- Header injection script -->
+  <script>
+    const titleMap = {
+      "index.html": "Home",
+      "guiding.html": "Guiding Principles",
+      "projects.html": "Professional Projects",
+      "ethics.html": "Ethical Reflection",
+      "reflection.html": "Spiritual Reflection",
+      "usability.html": "Usability",
+      "resume.html": "Resume",
+      "action-plan.html": "Action Plan",
+      "final-reflection": "Final Reflection"
+    };
+
+    const path = window.location.pathname.split("/").pop();
+    const title = titleMap[path] || "Portfolio";
+
+    fetch("header.html")
+      .then((res) => res.text())
+      .then((text) => {
+        document.getElementById("site-header").innerHTML = text;
+        const headerTitle = document.getElementById("page-title");
+        if (headerTitle) headerTitle.textContent = title;
+      });
+  </script>
+  <!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
+<main>
+ <div class="feature-box">  
+  <h1>Final Reflective Essay</h1>
+
+  <section>
+    <p>
+      At the beginning of this course, I envisioned my portfolio as a place to showcase my technical work and spiritual values.
+      I wanted it to reflect who I am, not just as an IT professional, but as someone striving to live and lead as a disciple of our Savior, Jesus Christ.
+      Now, as I look back on what I’ve built and experienced, I can see how much that vision has evolved.
+    </p>
+
+    <p>
+      Throughout this course, I’ve had many opportunities to reflect on what really drives me: service, integrity, and continuous growth.
+      My spiritual portfolio captures the values and scriptures that help to ground me, while my professional portfolio helps pain a picture of how 
+      I apply those values in real-world IT scenarios.  Each project description connects my technical efforts to a higher purpose, solving 
+      problems ethically, mentoring others, and using technology in ways that lift and support.
+    </p>
+
+    <p>
+      One of the biggest shifts I have seen in me was recognizing that my professional growth isn’t just about certifications or skills, it’s 
+      about who I become in the process.  I now view leadership not as a title, but as an opportunity to serve.
+      This perspective has helped to reshaped how I interact with colleagues, how I mentor newer staff, and how I think about my long-term goals.
+    </p>
+
+    <p>
+      My portfolio will continue to serve as a living document.  I plan to update it with new projects and spiritual reflections, 
+      using it as a way to measure progress, not just in IT milestones, but in my journey as a disciple of Jesus Christ.
+      It’s more than a showcase; it’s a commitment to my continued spiritual and professional growth.
+    </p>
+
+    <p>
+      Ultimately, this course has helped me better align my professional and spiritual paths.
+      The integration is far from perfect, but it’s improving. 
+      That’s what I plan to carry forward: continual improvement, service, and the drive to keep learning and growing.
+    </p>
+  </section>
+  </div>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
+

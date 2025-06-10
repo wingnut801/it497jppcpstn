@@ -20,7 +20,9 @@
     "ethics.html": "Ethical Reflection",
     "reflection.html": "Spiritual Reflection",
     "usability.html": "Usability",
-    "resume.html": "Résumé"
+    "resume.html": "Resume",
+    "action-plan.html": "Action Plan",
+    "final-reflection": "Final Reflection"
   };
 
   const path = window.location.pathname.split("/").pop();
@@ -35,7 +37,16 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script>
-  <main>
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
+   <main>
+    <div class="feature-box">
     <section>
       <h2>Growth Through Adversity</h2>
       <p>I’ve learned that adversity is not just a part of life—it’s a key component of growth. This principle has shown up in both my spiritual journey and my IT career. Whether it's troubleshooting complex system failures or facing unexpected leadership challenges, I've found that meaningful progress often comes on the other side of difficulty. Spiritually, I've come to understand that trials are tools in the Lord’s hands to refine me, not punish me. Professionally, I’ve grown most when things haven’t gone smoothly—those are the times that stretch me, teach me humility, and help me rely more on the Savior.</p>
@@ -71,9 +82,8 @@
         <li>Insight: “Don’t rush the process”</li>
       </ul>
     </section>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 J Nuttall. Built with HTML, CSS, and purpose.</p>
-  </footer>
+<div id="site-footer"></div>
 </body>
 </html>

@@ -20,7 +20,9 @@
     "ethics.html": "Ethical Reflection",
     "reflection.html": "Spiritual Reflection",
     "usability.html": "Usability",
-    "resume.html": "Résumé"
+    "resume.html": "Resume",
+    "action-plan.html": "Action Plan",
+    "final-reflection": "Final Reflection"
   };
 
   const path = window.location.pathname.split("/").pop();
@@ -35,7 +37,16 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script>
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
   <main>
+   <div class="feature-box">  
     <section>
       <h2>File Server Migration</h2>
       <p>This project involved migrating a large dataset from legacy infrastructure to a secure, modern file system using PowerShell and Robocopy. I implemented logging, error checking, and planned departmental coordination to reduce downtime. Spiritually, this reflected my value of integrity and stewardship—handling sensitive systems with care and follow-through.</p>
@@ -54,10 +65,8 @@
       <h2>Security Monitoring Implementation</h2>
       <p>I implemented a Security Information and Event Management (SIEM) system to proactively monitor logs and detect anomalies across critical infrastructure. This included setting up alerting, log retention, and dashboards to support incident response. Spiritually, this project deepened my sense of vigilance and responsibility—watching over systems the way one might watch over others with care and diligence.</p>
     </section>
+   </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 J. Nuttall. Built with HTML, CSS, and purpose.</p>
-  </footer>
+<div id="site-footer"></div>
 </body>
 </html>

@@ -20,7 +20,9 @@
     "ethics.html": "Ethical Reflection",
     "reflection.html": "Spiritual Reflection",
     "usability.html": "Usability",
-    "resume.html": "Résumé"
+    "resume.html": "Resume",
+    "action-plan.html": "Action Plan",
+    "final-reflection": "Final Reflection"
   };
 
   const path = window.location.pathname.split("/").pop();
@@ -35,7 +37,17 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script>
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
+
   <main>
+   <div class="feature-box"> 
     <section>
       <h2>Analysis of an Ethical Dilemma</h2>
       <p>A few years ago, a technician misused elevated privileges by granting unauthorized access to another users information. This action exposed sensitive, work-related files that included personally identifiable information (PII) and violated policy boundaries. The technician had no valid reason to access the device, as it was outside their assigned responsibilities.</p>
@@ -44,17 +56,22 @@
     </section>
     <section>
       <h2>Alternative Handling and Expanded Reflection</h2>
-      <p><strong>Original Dilemma:</strong> A technician used elevated access privileges to allow another staff member to view a colleague’s confidential files without permission. These files involved HR matters and contained sensitive PII.</p>
-    
-     <p><strong>Ethical Principles Violated:</strong> This violated honesty, responsibility, consent, and respect for privacy. It demonstrated a breakdown of trust and a failure to uphold professional boundaries.</p>
-    
-     <p><strong>Alternative Handling:</strong> Rather than carelessly granting access, the technician should have escalated the request to a supervisor or referred it to HR. Explicit user consent should have been obtained, and proper access logging should have been enforced. In truth, the request should never have been made—there was no legitimate need for access. The situation took advantage of the technician’s trust and unfamiliarity with protocol.</p>
-    
-     <p>Preserving data privacy, maintaining organizational trust, and following protocol are essential in fostering a culture of responsibility. This event deepened my conviction that ethical IT practice is as much about courage and boundaries as it is about technical skill.</p>
-   </section>
+      <p><strong>Original Dilemma:</strong> 
+        <ul>
+        <li>A technician used elevated access privileges to allow another staff member to view a colleague’s confidential files without permission. These files involved HR matters and contained sensitive PII.</li>
+    </ul>
+     <p><strong>Ethical Principles Violated:</strong> 
+      <ul>
+      <li>This violated honesty, responsibility, consent, and respect for privacy. It demonstrated a breakdown of trust and a failure to uphold professional boundaries.</li>
+    </ul>
+     <p><strong>Alternative Handling:</strong> 
+      <ul>
+      <li>Rather than carelessly granting access, the technician should have escalated the request to a supervisor or referred it to HR. Explicit user consent should have been obtained, and proper access logging should have been enforced. In truth, the request should never have been made—there was no legitimate need for access. The situation took advantage of the technician’s trust and unfamiliarity with protocol.
+          Preserving data privacy, maintaining organizational trust, and following protocol are essential in fostering a culture of responsibility. This event deepened my conviction that ethical IT practice is as much about courage and boundaries as it is about technical skill.</li>
+      </ul>  
+    </section>
+   </div>
   </main>
-  <footer>
-    <p>&copy; 2025 J. Nuttall. Built with HTML, CSS, and purpose.</p>
-  </footer>
+<div id="site-footer"></div>
 </body>
 </html>

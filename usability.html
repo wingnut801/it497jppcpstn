@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Spiritual Reflection</title>
+  <title>Usability</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -20,7 +20,9 @@
     "ethics.html": "Ethical Reflection",
     "reflection.html": "Spiritual Reflection",
     "usability.html": "Usability",
-    "resume.html": "Résumé"
+    "resume.html": "Resume",
+    "action-plan.html": "Action Plan",
+    "final-reflection": "Final Reflection"
   };
 
   const path = window.location.pathname.split("/").pop();
@@ -35,8 +37,17 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script>
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
 <main>
-<section>
+ <div class="feature-box"> 
+ <section>
   <h2>Portfolio Usability Testing and Design Enhancements</h2>
 
   <h3>Usability Testing Participants</h3>
@@ -66,5 +77,8 @@
   <h3>Impact on Usability</h3>
   <p>Visitors now find it easier to navigate between sections. Reflections are more readable, and the site feels more polished and professional, especially on mobile. Accessibility is also improved for users with visual limitations or alternative devices.</p>
 </section>
-
+ </div>
 </main>
+<div id="site-footer"></div>
+</body>
+</html>

@@ -35,21 +35,35 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script> 
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
   <main>
+    <div class="feature-box">
     <section>
       <div>
       <h2>Welcome</h2>
-      <p>Welcome to this integrated portfolio. It represents a journey of technical development and personal faith. Inside, you'll find spiritual principles, IT-related project work, and reflective content connecting technology and ethical leadership.</p>
+      <p>Welcome to this integrated portfolio. It represents an ongoing journey of professional growth, technical development, and personal faith. </p>
+<p>
+  This site brings together my experiences as a Lead Systems Engineer and a disciple of Jesus Christ, showcasing how spiritual principles and professional practices can work hand in hand. 
+  Inside, you’ll find a collection of IT-related project work, guiding values grounded in scripture, and reflections on ethical leadership in a technology-driven world.
+</p>
+<p>Whether you're here to explore technical solutions, spiritual insights, or both, 
+  I invite you to view this portfolio not just as a summary of achievements, but as a reflection of continued growth, professionally, personally, and spiritually.</p>
+
       </div>
     </section>
     <section class="hero">
       <img src="assets/hero-temple.jpg" alt="Ogden Ut temple" class="hero-image">
     </section>
+  </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 J. Nuttall. Built with HTML, CSS, and purpose.</p>
-  </footer>
+  <div id="site-footer"></div>  
 </body>
 </html>
 

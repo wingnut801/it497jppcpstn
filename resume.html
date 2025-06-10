@@ -20,7 +20,9 @@
     "ethics.html": "Ethical Reflection",
     "reflection.html": "Spiritual Reflection",
     "usability.html": "Usability",
-    "resume.html": "Résumé"
+    "resume.html": "Resume",
+    "action-plan.html": "Action Plan",
+    "final-reflection": "Final Reflection"
   };
 
   const path = window.location.pathname.split("/").pop();
@@ -35,7 +37,16 @@
       if (headerTitle) headerTitle.textContent = title;
     });
 </script>
+<!-- Load footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById('site-footer').innerHTML = text;
+    });
+</script>
   <main>
+    <div class="feature-box"> 
     <section>
       <h2>J. Nuttall</h2>
       <p>Email: available upon request</p>
@@ -94,9 +105,8 @@
 
       <p><em>This resume has been modified for public viewing. A full version is available upon request.</em></p>
     </section>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 J. Nuttall. Built with HTML, CSS, and purpose.</p>
-  </footer>
+<div id="site-footer"></div>
 </body>
 </html>
