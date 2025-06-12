@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Peer Review Summary</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .feature-box {
+      background-color: #eef3f8;
+      border-left: 4px solid #003366;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <script>
+    const titleMap = {
+      "index.html": "Home",
+      "guiding.html": "Guiding Principles",
+      "projects.html": "Professional Projects",
+      "ethics.html": "Ethical Reflection",
+      "reflection.html": "Spiritual Reflection",
+      "usability.html": "Usability",
+      "resume.html": "Resume",
+      "action-plan.html": "Action Plan",
+      "final-reflection": "Final Reflection",
+      "peer-reviews.html": "Peer Review Summary"
+    };
+
+    const path = window.location.pathname.split("/").pop();
+    const title = titleMap[path] || "Portfolio";
+
+    fetch("header.html")
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById("site-header").innerHTML = text;
+        const headerTitle = document.getElementById("page-title");
+        if (headerTitle) headerTitle.textContent = title;
+      });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById("site-footer").innerHTML = text;
+      });
+  </script>
+
+<main class="feature-box">
+    <h1>Portfolio Peer Review Summary</h1>
+
+    <p>I participated in two peer reviews as part of the Week 6 assignment. For both, I provided detailed feedback focused on content clarity, visual organization, alignment to spiritual and professional goals, and technical depth.</p>
+
+ <section>
+  <h2>Feedback (Peer Review 1 – Chakanyuka)</h2>
+  <ul>
+    <li>I complimented the integration of faith and technical work, especially the inclusion of spiritual reflections in each project.</li>
+    <li>I provided suggestions to break up long text blocks into bullet points and to add more visuals to improve readability.</li>
+    <li>I shared how I was personally inspired by the principle “Service Brings Strength” and the practice of praying before technical tasks.</li>
+    <li>I asked how spiritual guiding principles influence decision-making during high-pressure scenarios like security incidents.</li>
+  </ul>
+ </section>
+ <section>
+  <h2>Feedback (Peer Review 2 – Roberto)</h2>
+  <ul>
+    <li>I complimented the portfolio’s organization and how well it tied spiritual reflections to career experiences.</li>
+    <li>I noted that the layout was clean and that his personal values came through clearly in the content.</li>
+    <li>I shared how his thoughts on trusting the Lord’s timing reminded me to be more intentional about involving Heavenly Father in my work and planning.</li>
+    <li>I suggested adding visuals or screenshots to break up the text and including more detail on project tools to help highlight technical skills.</li>
+    <li>I asked how he stays spiritually grounded in a fast-paced work setting where it’s easy to lose focus on those principles.</li>
+  </ul>
+ </section>
+ <section>
+  <h2>Implementation Summary (Based on Peer Reviews)</h2>
+  <ul>
+    <li>I revised some of my reflection content to break up longer paragraphs using headings and bullet points for better readability, especially on mobile.</li>
+    <li>I clarified technical tools and decisions in my project summaries to better highlight my contributions, even though I didn’t add external files or screenshots at this time.</li>
+    <li>I reviewed all internal links to ensure they work consistently and considered a central folder for documents as a future enhancement.</li>
+    <li>I made a small addition to my ethical reflection, noting that quarterly privileged access audits are a more realistic cadence for smaller IT teams.</li>
+  </ul>
+  </section>
+</main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
